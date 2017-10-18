@@ -46,6 +46,7 @@ endif()
 if(USE_PYGMO)
   list(APPEND BoostComponents python python3)
 endif()
+
 # Pick a boost version
 set(BoostVersion 1.64.0)
 set(BoostSHA1 51421ef259a4530edea0fbfc448460fcc5c64edb)
