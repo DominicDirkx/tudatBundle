@@ -1,4 +1,4 @@
-#    Copyright (c) 2010-2016, Delft University of Technology
+#    Copyright (c) 2010-2017, Delft University of Technology
 #    All rigths reserved
 #
 #    This file is part of the Tudat. Redistribution and use in source and
@@ -80,6 +80,10 @@ set(Boost_NO_SYSTEM_PATHS ON)
 set(BoostCacheDir   "${BOOST_INCLUDEDIR}/build")
 file(MAKE_DIRECTORY "${BOOST_INCLUDEDIR}")
 file(MAKE_DIRECTORY "${BoostCacheDir}")
+
+# Force using static libraries as the build libraries are not installed to the system
+# or the libs dir added to the path.
+set(Boost_USE_STATIC_LIBS ON)
 
 #
 # Check if local Boost is not already present
